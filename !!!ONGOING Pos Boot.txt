@@ -157,9 +157,17 @@ alias br='xrandr --output eDP1 --brightness'
 br 0.4
 
 disable trackpad - leave mouse
+synclient TouchpadOff=1
+
 open terminal - remapped to ctrl c ctrl v - to copy paste
+
+terminal/copy -n -t string -s "<Primary>c" && xfconf-query -c xfce4-terminal -p /shortcuts/terminal/paste -n -t string -s "<Primary>v" && xfce4-terminal
+
+xfconf-query -c xfce4-terminal -p /shortcuts/terminal/copy -n -t string -s "<Primary>c" && xfconf-query -c xfce4-terminal -p /shortcuts/terminal/paste -n -t string -s "<Primary>v" && xfce4-terminal --config=shortcuts/terminal/copy="<Primary>c" --config=shortcuts/terminal/paste="<Primary>v"
+
 install a browser
 open 5 tabs - with these urls -and a nethod for me to add remove in the future -
+
 fix audio certify that mic is working - install dictation - test - 
 
 nano /etc/pacman.conf    (clean below)
