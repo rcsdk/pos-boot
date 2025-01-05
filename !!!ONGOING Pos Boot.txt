@@ -124,6 +124,8 @@ mkdir /mnt/etc
 
 nano /etc/pacman.conf 
 
+replace all wit this and save - 
+
 [options]
 RootDir = /
 DBPath = /var/lib/pacman/
