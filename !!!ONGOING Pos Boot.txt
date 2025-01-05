@@ -108,10 +108,49 @@ Architecture = auto
 ^G Help         ^O Write Out    ^F Where Is     ^K Cut          ^T Execute      ^C Location
 ^X Exit         ^R Read File    ^\ Replace      ^U Paste        ^J Justify      ^/ Go To Line
 
+------------------------------------------------------------
+
+fdisk /dev/sda
+mkfs.ext4 /dev/sda
+tune2fs -c 0 -i 0 /dev/sda
+mount /dev/sda /mnt
+df -h
+ls -l /mnt
+mkdir /mnt/boot
+mkdir /mnt/etc
+
+nano /etc/pacman.conf 
+
+[options]
+RootDir = /
+DBPath = /var/lib/pacman/
+CacheDir = /var/cache/pacman/pkg/
+LogFile = /var/log/pacman.log
+GPGDir = /etc/pacman.d/gnupg/
+HoldPkg = pacman glibc
+XferCommand = /usr/bin/curl -C - -f %u > %o
+Architecture = auto
+
+[core]
+Include = /etc/pacman.d/mirrorlist
+
+[extra]
+Include = /etc/pacman.d/mirrorlist
+
+[community]
+Include = /etc/pacman.d/mirrorlist
+
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+
+
+pacstrap /mnt base base-devel
 
 
 
 
+------------------------------------------------------------
+IDEAL SCRIPT
 	
 disable trackpad - leave mouse
 open terminal - remapped to ctrl c ctrl v - to copy paste
