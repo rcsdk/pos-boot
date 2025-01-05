@@ -24,6 +24,9 @@ systemctl status udisks2.service --no-pager
 
 : <<'END_TEXT'
 
+------------------------------------------------------------
+SOUND FIX
+
 i need you to work with me as an expert in linux and sound. the most experienced in the world in arch linux.
 
 i cant make sound work no matter what, tried many times - latests attempts - kernel parts missing, sound card not found. im on arch over system rescue suffererd termpering injection on boot, and I loaded to RAM. Even then, I dont know how, malware i already present overlaying practically everything inside firefox. Gets a little better when I go to Private tabs mode. For istance if i try to download kapersky rescue disk the html is all tempered and the link is not there, i see the difference on a private tab on firefox.
