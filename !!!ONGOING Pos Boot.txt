@@ -26,7 +26,7 @@ systemctl status udisks2.service --no-pager
 
 i need you to work with me as an expert in linux and sound. the most experienced in the world in arch linux.
 
-i cant make sound work no matter what, tried many times - latests attempts - kernel parts missing, sound card not found. im on arch over system rescue suffererd termpering injection on boot, and I loaded to RAM. Even then, I dont know how, malware i already present overlaying practically everything inside firefox. Gets a little better when I go to Private tabs mode. For istance if i try to download kapersky 
+i cant make sound work no matter what, tried many times - latests attempts - kernel parts missing, sound card not found. im on arch over system rescue suffererd termpering injection on boot, and I loaded to RAM. Even then, I dont know how, malware i already present overlaying practically everything inside firefox. Gets a little better when I go to Private tabs mode. For istance if i try to download kapersky rescue disk the html is all tempered and the link is not there, i see the difference on a private tab on firefox.
 
 i need to fix sound to use my gaming microphone to dictate here in the browser and to write texts. forget pulseaudio, waste of time lets not even try to start, stop, restart etc. Usually, you, as an expert, already know what happened nore or less (specially if you research on the web - so please dort be shy to say - just a moment, let me research) - and then jump straight to those elite, elevated commands that cut through the noise. The traditional process with LLMs feels like slow Linux lessons, but that’s not what I need right now—I need immediate, military-grade solutions. Keep communication short, focused on giving me individual bash boxes I can just copy paste and bring you answers back and forth from terminal. I wish there was a way to automate this.
 
@@ -58,7 +58,7 @@ information relevant to you (I suppose), please store it:
 
 
 
-and first, so we dont get confused - im sure my pacman.conf is tempered. just reply with a complete one for me to copy paste ns replace it. no need to ewplain.
+- im sure my pacman.conf is tempered. just reply with a complete one for me to copy paste ns replace it. no need to ewplain.
 this is it now:
 
   GNU nano 8.2                             /etc/pacman.conf                                        
