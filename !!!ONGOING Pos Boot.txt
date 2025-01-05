@@ -26,9 +26,36 @@ systemctl status udisks2.service --no-pager
 
 i need you to work with me as an expert in linux and sound. the most experienced in the world in arch linux.
 
-i cant make it work no matter what - latests attempts - kernel parts missing, sound card not found. im on arch over system rescue suffererd termpering injection on boot, and I loaded to RAM. i need to fix sound to use my gaming microphone to dictate here in the browser and to write texts. forget pulseaudio, waste of time lets not even try to start, stop, restart etc. Usually, you, as an expert, already know what happened nore or less (specially if you research on the web - so please dort be shy to say - just a moment, let me research) - and then jump straight to those elite, elevated commands that cut through the noise. The traditional process with LLMs feels like slow Linux lessons, but that’s not what I need right now—I need immediate, military-grade solutions. Keep communication short, focused on giving me individual bash boxes I can just copy paste and bring you answers back and forth from terminal. I wish there was a way to automate this.
+i cant make sound work no matter what, tried many times - latests attempts - kernel parts missing, sound card not found. im on arch over system rescue suffererd termpering injection on boot, and I loaded to RAM. Even then, I dont know how, malware i already present overlaying practically everything inside firefox. Gets a little better when I go to Private tabs mode. For istance if i try to download kapersky 
+
+i need to fix sound to use my gaming microphone to dictate here in the browser and to write texts. forget pulseaudio, waste of time lets not even try to start, stop, restart etc. Usually, you, as an expert, already know what happened nore or less (specially if you research on the web - so please dort be shy to say - just a moment, let me research) - and then jump straight to those elite, elevated commands that cut through the noise. The traditional process with LLMs feels like slow Linux lessons, but that’s not what I need right now—I need immediate, military-grade solutions. Keep communication short, focused on giving me individual bash boxes I can just copy paste and bring you answers back and forth from terminal. I wish there was a way to automate this.
+
+this sequence is what got closer to it, i think - adding many missing parts to current arch:
+
+nano /etc/pacman.conf    (replacing with a clean one) (i wonder which other conf files could be tenpered - other vital ones?)
+pacman-key --init
+pacman --Syy
+pacman --Syu
+pacman --Sy
+pacman -S --noconfirm linux
+pacman -S --noconfirm linux-firmware
+pacman -S --noconfirm linux-lts
+pacman -S linux-firmware
+sudo mkinitcpio -p linux
+sudo pacman -Syu
+lsmod | grep xhci_pci
+lsmod | grep ast
+lsmod | grep aic94xx
+lsmod | grep wd719x
+dmesg | grep -i firmware
+dmesg | grep -i xhci_pci
+pacman -S --noconfirm volatility
+pacman -S --noconfirm memdump
+
+
 
 information relevant to you (I suppose), please store it:
+
 
 
 and first, so we dont get confused - im sure my pacman.conf is tempered. just reply with a complete one for me to copy paste ns replace it. no need to ewplain.
