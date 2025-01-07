@@ -173,6 +173,8 @@ br 0.4
 
 synclient TouchpadOff=1
 
+sudo rm -f /var/lib/pacman/db.lck
+
 install a browser
 open 5 tabs - with these urls -and a nethod for me to add remove in the future -
 
