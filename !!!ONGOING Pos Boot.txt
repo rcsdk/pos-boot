@@ -175,9 +175,10 @@ fix audio certify that mic is working - install dictation - test -
 
 nano /etc/pacman.conf    (clean below)
 pacman-key --init
+gpg --check-trustdb
 pacman --Syy
-pacman --Syu
-pacman --Sy
+pacman -Syu
+pacman -Sy
 pacman -S --noconfirm linux
 pacman -S --noconfirm linux-firmware
 pacman -S --noconfirm linux-lts
