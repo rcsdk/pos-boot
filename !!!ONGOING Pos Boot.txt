@@ -4,6 +4,154 @@ Please read from the beggining of this chat, organize the information really wel
 
 
 
+
+THE GOAL TODAY: im working on a script that i want to run everytime i boot so I can quicly Patch the system and start to work on Figma (im a designer). Then I trigger the second one. So I dont have to wait a long time. The goal today is to finalize it with you. It's already on github. I also need to check on the internet connections in my house - where there is only wi=fi - no cables - so no ethernet - if there are hiddden connections. Im pretty sure there are. (malware)
+ 
+ 
+I need you to work with me as the world’s most famous, tactical, and violent penetration tester and computing engineer, well-known for solving any kind of Linux defense attack problem. Your main goal is to reach the solution no matter what—enemy, a stalker, 3 months into this fight, already lost my job, and I have a young 4-year-old daughter to feed, my Maria. This is a war for survival. You’re dealing with an advanced bootkit that has infiltrated and compromised the system’s bootloader, preventing regular recovery methods. The situation is critical—every minute counts. The malware hides and adapts, making it resistant to traditional troubleshooting techniques. It's a race against time to neutralize this threat, reclaim full control of the system, and ensure the security of personal data. This is a high-stakes mission requiring elite techniques, military-grade tools, and advanced penetration testing strategies to regain access. He always injects at  the beggining, so as a bootkit -when you load the OS, he is there already. On system rescue, at bootloading, always on boot. suspected to be on VRAM. You use tools like Metasploit, Dirty Cow, Stage, and others of that caliber, but we cannot waste time with beginner-grade techniques or endless debugging sessions unless strictly necessary. Usually, you already know what happened -- and this is very important now -- and jump straight to those elite, elevated commands that cut through the noise. The traditional process with LLMs feels like slow Linux lessons, but that’s not what I need right now — I need immediate, military-grade solutions.
+
+
+i cant make sound work no matter what, tried many times - latests attempts - kernel parts missing, sound card not found. im on arch over system rescue suffererd termpering injection on boot, and I loaded to RAM. Even then, I dont know how, malware i already present overlaying practically everything inside firefox. Gets a little better when I go to Private tabs mode. For istance if i try to download kapersky rescue disk the html is all tempered and the link is not there, i see the difference on a private tab on firefox.
+
+i need to fix sound to use my gaming microphone to dictate here in the browser and to write texts. forget pulseaudio, waste of time lets not even try to start, stop, restart etc. Usually, you, as an expert, already know what happened nore or less (specially if you research on the web - so please dort be shy to say - just a moment, let me research) - and then jump straight to those elite, elevated commands that cut through the noise. The traditional process with LLMs feels like slow Linux lessons, but that’s not what I need right now—I need immediate, military-grade solutions. Keep communication short, focused on giving me individual bash boxes I can just copy paste and bring you answers back and forth from terminal. I wish there was a way to automate this.
+
+---------------------------
+
+----------------------
+
+Environment
+
+System: A Arch Linux-based environment, with a compromised bootloader and operating system due to a bootkit. You’re operating in a RAM-based recovery environment - SystemRescue 11.03, where the system must be repaired without rebooting into the infected OS.
+
+Hardware: Target system is a Samsung Galaxy Book 2 Pro (NP950XEE-XA1BR), running a Arch Linux-based OS. The device is in a compromised state, and the system is locked down by malware-enforced restrictions. Intel 12th Gen Core i7-1260P 1 physical processor; 12 cores; 16 threads // Display Adapter	Intel DG2 [Arc A350M] + Intel Alder Lake-P GT2 [Iris Xe Graphics]  // 	OpenGL Renderer	(Unknown)  //  Daniel is working on a XFCE Desktop on top of this.
+
+User Permissions: You have root-level access (or equivalent) to perform system-wide changes but face restrictions due to the malware’s interference.
+
+Firmware: Doesnt show the information, suspected being tampered
+
+Ports: several opened, with suspicious conections, most probably the malware. user isnt working and is not using the machine exactly so we can see pure state. examples; 0.0.0.0:22	LISTEN	0.0.0.0:*	tcp   //  :::22	LISTEN	:::*	tcp6    //    fe80::6ae1:6c92:a8a:546		:::*	udp6   //   	:::58977		:::*	udp6
+
+Malware Description: The bootkit manipulates the system's boot sequence, prevents BIOS access, and disguises itself within the kernel. Your goal is to neutralize this threat without rebooting into the infected OS or BIOS. Suspected to live in VRAM. Uses injections of all sorts, specially at the beginning of boots - android, iOS, linux (all distros), Windows. Use MM man of the middle a lot, and a lot of overlays - ALL OVER -on apps, websites, etc
+
+System Constraints: No BIOS access, persistent malware remains despite factory resets, and system operations must be conducted via RAM-based environments to prevent re-infection.
+
+---------------------
+
+Is this the best possible Pacman?
+
+
+
+EDIT PACMAN: this is the clean
+nano /etc/pacman.conf
+
+
+
+# NOTE: You must run `pacman-key --init` before first using pacman; the local
+# keyring can then be populated with the keys of all official Arch Linux
+# packagers with `pacman-key --populate archlinux`.
+
+[options]
+HoldPkg     = pacman glibc
+SyncFirst   = pacman
+Architecture = auto
+
+[core]
+SigLevel    = Required DatabaseOptional
+Include     = /etc/pacman.d/mirrorlist
+
+[extra]
+SigLevel    = Required DatabaseOptional
+Include     = /etc/pacman.d/mirrorlist
+
+[community]
+SigLevel    = Required DatabaseOptional
+Include     = /etc/pacman.d/mirrorlist
+
+[multilib]
+SigLevel    = Required DatabaseOptional
+Include     = /etc/pacman.d/mirrorlist
+
+[archlinuxfr]
+SigLevel    = Optional TrustAll
+Server      = http://repo.archlinux.fr/$arch
+
+[herecura]
+SigLevel    = Optional TrustAll
+Server      = http://repo.herecura.be/herecura-stable/$arch
+
+[antergos]
+SigLevel    = Optional TrustAll
+Server      = http://repo.antergos.com/$arch/$repo
+
+#[google-chrome]
+#SigLevel    = Optional TrustAll
+#Server      = http://dl.google.com/linux/chrome/rpm/stable/$arch
+
+#[testing]
+#SigLevel    = Optional TrustAll
+#Include     = /etc/pacman.d/mirrorlist
+
+#[community-testing]
+#SigLevel    = Optional TrustAll
+#Include     = /etc/pacman.d/mirrorlist
+
+#[multilib-testing]
+#SigLevel    = Optional TrustAll
+#Include     = /etc/pacman.d/mirrorlist
+
+#[kde-unstable]
+#SigLevel    = Optional TrustAll
+#Include     = /etc/pacman.d/mirrorlist
+
+#[gnome-unstable]
+#SigLevel    = Optional TrustAll
+#Include     = /etc/pacman.d/mirrorlist
+
+#[erikreider]
+#SigLevel    = Optional TrustAll
+#Server      = http://pkgbuild.com/~erikreider/repo/$arch
+
+#[haskell]
+#SigLevel    = Optional TrustAll
+#Server      = http://archhaskell.mynerdside.com/$repo/$arch
+
+
+
+
+
+
+---------------------
+
+Im suspicious that these can be related to the fact my sound is not working - this is when I do -
+
+pacman -S --noconfirm linux
+pacman -S --noconfirm linux-firmware
+pacman -S --noconfirm linux-lts
+
+
+
+==> WARNING: cannot detect type of overlayfs root filesystem
+==> ERROR: specified kernel image does not exist: '/boot/vmlinuz-linux-lts'
+==> ERROR: specified kernel image does not exist: '/boot/vmlinuz-linux-lts'
+==> WARNING: cannot detect type of overlayfs root filesystem
+==> WARNING: Possibly missing firmware for module: 'ast'
+==> WARNING: Possibly missing firmware for module: 'xhci_pci_renesas'
+==> WARNING: Possibly missing firmware for module: 'aic94xx'
+==> WARNING: Possibly missing firmware for module: 'wd719x'
+
+
+---------------------
+
+
+
+
+
+
+
+
+
+
+
 #!/bin/bash
 
 
