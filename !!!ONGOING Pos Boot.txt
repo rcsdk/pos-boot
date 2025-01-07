@@ -1,3 +1,8 @@
+Please read from the beggining of this chat, organize the information really well and think critically. What is my goal? How are we going to achieve it? Do we have steps planned? If we do, what are they, which ones have we done already, which one is the active one, and what should we do now to continue? Re-assess. Make sure we are on the right track. I need your absolute best on this. Please let's jump straight to ultimate level. 
+
+
+
+
 
 #!/bin/bash
 
