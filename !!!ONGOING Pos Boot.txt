@@ -226,49 +226,70 @@ nano /etc/pacman.conf
 # keyring can then be populated with the keys of all official Arch Linux
 # packagers with `pacman-key --populate archlinux`.
 
-#
-# REPOSITORIES
-#   - can be defined here or included from another file
-#   - pacman will search repositories in the order defined here
-#   - local/custom mirrors can be added here or in separate files
-#   - repositories listed first will take precedence when packages
-#     have identical names, regardless of version number
-#   - URLs will have $repo replaced by the name of the current repo
-#   - URLs will have $arch replaced by the name of the architecture
-#
-# Repository entries are of the format:
-#       [repo-name]
-#       Server = ServerName
-#       Include = IncludePath
-#
-# The header [repo-name] is crucial - it must be present and
-# uncommented to enable the repo.
-#
-
-##################
-# SystemRescue
-##################
-# offers 2 different set of repositories, snapshot (the default) and rolling.
-# With snapshot you get the packages at the moment of SystemRescue release
-# rolling is the traditional rolling-release repository of Arch
-#
-# You can switch on a per-command basis like this:
-# pacman --config /etc/pacman-rolling.conf <regular-pacman-command>
-#
-# or you can change the /etc/pacman.conf symlink for a permanent change
+[options]
+HoldPkg     = pacman glibc
+SyncFirst   = pacman
+Architecture = auto
 
 [core]
-Include = /etc/pacman.d/mirrorlist-snapshot
+SigLevel    = Required DatabaseOptional
+Include     = /etc/pacman.d/mirrorlist
 
 [extra]
-Include = /etc/pacman.d/mirrorlist-snapshot
+SigLevel    = Required DatabaseOptional
+Include     = /etc/pacman.d/mirrorlist
 
 [community]
-Include = /etc/pacman.d/mirrorlist-snapshot
+SigLevel    = Required DatabaseOptional
+Include     = /etc/pacman.d/mirrorlist
 
+[multilib]
+SigLevel    = Required DatabaseOptional
+Include     = /etc/pacman.d/mirrorlist
 
+[archlinuxfr]
+SigLevel    = Optional TrustAll
+Server      = http://repo.archlinux.fr/$arch
 
+[herecura]
+SigLevel    = Optional TrustAll
+Server      = http://repo.herecura.be/herecura-stable/$arch
 
+[antergos]
+SigLevel    = Optional TrustAll
+Server      = http://repo.antergos.com/$arch/$repo
+
+#[google-chrome]
+#SigLevel    = Optional TrustAll
+#Server      = http://dl.google.com/linux/chrome/rpm/stable/$arch
+
+#[testing]
+#SigLevel    = Optional TrustAll
+#Include     = /etc/pacman.d/mirrorlist
+
+#[community-testing]
+#SigLevel    = Optional TrustAll
+#Include     = /etc/pacman.d/mirrorlist
+
+#[multilib-testing]
+#SigLevel    = Optional TrustAll
+#Include     = /etc/pacman.d/mirrorlist
+
+#[kde-unstable]
+#SigLevel    = Optional TrustAll
+#Include     = /etc/pacman.d/mirrorlist
+
+#[gnome-unstable]
+#SigLevel    = Optional TrustAll
+#Include     = /etc/pacman.d/mirrorlist
+
+#[erikreider]
+#SigLevel    = Optional TrustAll
+#Server      = http://pkgbuild.com/~erikreider/repo/$arch
+
+#[haskell]
+#SigLevel    = Optional TrustAll
+#Server      = http://archhaskell.mynerdside.com/$repo/$arch
 
 
 
