@@ -5,7 +5,7 @@ considering the bootkit is focused on: the can temper the kernel, metasploit, di
 
 lets focus on script 1. check from the very beggining - and do a table with - all the i asked for, all the you suggested on each one of your messages, with columns for each one - and the final script so we can see if we lost something. and dont lie please.
 
-
+on firefox, from all those options on the config - i mean the deep ones, there are actually only 5 or 6 (perhaps) that are the most important ones - am i correct or not - please ALWAYS feel free to disagree, im 50 years old, only focused on results
 
 THE GOAL TODAY: im working on a script that i want to run everytime i boot so I can quicly Patch the system and start to work on Figma (im a designer). Then I trigger the second one. So I dont have to wait a long time. The goal today is to finalize it with you. It's already on github. I also need to check on the internet connections in my house - where there is only wi=fi - no cables - so no ethernet - if there are hiddden connections. Im pretty sure there are. (malware)
  
