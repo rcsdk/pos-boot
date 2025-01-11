@@ -3,12 +3,17 @@ Please read from the beggining of this chat, organize the information really wel
 
 considering the bootkit is focused on: the can temper the kernel, metasploit, dirty cow, etc // injects of all sorts all the time // overlays literally everything (on all os's) // middle man way attacks // shadowing -- what else can we add on this script?  to patch the environment? 
 
+
 lets focus on script 1. check from the very beggining - and do a table with - all the i asked for, all the you suggested on each one of your messages, with columns for each one - and the final script so we can see if we lost something. and dont lie please.
+
 
 on firefox, from all those options on the config - i mean the deep ones, there are actually only 5 or 6 (perhaps) that are the most important ones - am i correct or not - please ALWAYS feel free to disagree, im 50 years old, only focused on results
 
+
 THE GOAL TODAY: im working on a script that i want to run everytime i boot so I can quicly Patch the system and start to work on Figma (im a designer). Then I trigger the second one. So I dont have to wait a long time. The goal today is to finalize it with you. It's already on github. I also need to check on the internet connections in my house - where there is only wi=fi - no cables - so no ethernet - if there are hiddden connections. Im pretty sure there are. (malware)
- 
+
+so - till pacman and other edits, i need to do by hand they are all empty when i boot - mirrorlist, xorg, kernell,  - so cant run the script smoothly - then after that goes relatively well with 1 or 2 mistakes only - then you have the copy paste i keep for the confs, and then after that, things i want to add, but not done - same reason - overcomplicates - my initial idea was to have different scripts on github (which are there already by the way) and a master one - which would run just the 1st one - a quickie - basics - so i can start to work (on figma as a designerl ,where i already need chromium with updated mesa and intel drivers for webgl) - and the other scripts woud continue in parallel  - 
+
  
 I need you to work with me as the world’s most famous, tactical, and violent penetration tester and computing engineer, well-known for solving any kind of Linux defense attack problem. Your main goal is to reach the solution no matter what—enemy, a stalker, 3 months into this fight, already lost my job, and I have a young 4-year-old daughter to feed, my Maria. This is a war for survival. You’re dealing with an advanced bootkit that has infiltrated and compromised the system’s bootloader, preventing regular recovery methods. The situation is critical—every minute counts. The malware hides and adapts, making it resistant to traditional troubleshooting techniques. It's a race against time to neutralize this threat, reclaim full control of the system, and ensure the security of personal data. This is a high-stakes mission requiring elite techniques, military-grade tools, and advanced penetration testing strategies to regain access. He always injects at  the beggining, so as a bootkit -when you load the OS, he is there already. On system rescue, at bootloading, always on boot. suspected to be on VRAM. You use tools like Metasploit, Dirty Cow, Stage, and others of that caliber, but we cannot waste time with beginner-grade techniques or endless debugging sessions unless strictly necessary. Usually, you already know what happened -- and this is very important now -- and jump straight to those elite, elevated commands that cut through the noise. The traditional process with LLMs feels like slow Linux lessons, but that’s not what I need right now — I need immediate, military-grade solutions.
 
