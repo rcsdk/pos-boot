@@ -10,6 +10,76 @@ Pleas alwasy be sure we are on the right track. Is it really the best route? Is 
 
 lets make a table with all the important things to make Figma run super smooth. lets understand well my hardware. lets install figma for liuxl researxh other designers and ultimate solutions. with columns for each one -
 
+
+[root@sysrescue ~]# inxi -Fxz
+System:
+  Kernel: 6.6.63-1-lts arch: x86_64 bits: 64 compiler: gcc v: 14.2.1
+  Desktop: Xfce v: 4.18.1 Distro: SystemRescue 11.03
+Machine:
+  Type: Laptop System: SAMSUNG product: 950XEE v: P12RGG serial: <filter>
+  Mobo: SAMSUNG model: NP950XEE-XA1BR
+    v: SGLB420A0A-C01-G001-S0001+10.0.22621 serial: <filter> UEFI: American
+    Megatrends LLC. v: P12RGG.063.240529.XW date: 05/29/2024
+Battery:
+  ID-1: BAT1 charge: 65.6 Wh (99.1%) condition: 66.2/66.8 Wh (99.1%)
+    volts: 17.3 min: 15.4 model: SAMSUNG Electronics SR Real Battery
+    status: not charging
+CPU:
+  Info: 12-core (4-mt/8-st) model: 12th Gen Intel Core i7-1260P bits: 64
+    type: MST AMCP arch: Alder Lake rev: 3 cache: L1: 1.1 MiB L2: 9 MiB
+    L3: 18 MiB
+  Speed (MHz): avg: 400 min/max: 400/4700:3400 cores: 1: 400 2: 400 3: 400
+    4: 400 5: 400 6: 400 7: 400 8: 400 9: 400 10: 400 11: 400 12: 400 13: 400
+    14: 400 15: 400 16: 400 bogomips: 79888
+  Flags: avx avx2 ht lm nx pae sse sse2 sse3 sse4_1 sse4_2 ssse3 vmx
+Graphics:
+  Device-1: Intel Alder Lake-P GT2 [Iris Xe Graphics] vendor: Samsung Co
+    driver: i915 v: kernel arch: Gen-12.2 bus-ID: 00:02.0
+  Device-2: Intel DG2 [Arc A350M] vendor: Samsung Co driver: i915 v: kernel
+    arch: Gen-12.7 bus-ID: 04:00.0
+  Device-3: SunplusIT 1080p FHD Camera driver: uvcvideo type: USB
+    bus-ID: 3-6:4
+  Display: unspecified server: X.Org v: 21.1.14 with: Xwayland v: 24.1.4
+    driver: X: loaded: intel,modesetting unloaded: fbdev,vesa dri: i965
+    gpu: i915 resolution: 1920x1080~60Hz
+  API: Vulkan v: 1.3.295 drivers: intel surfaces: xcb,xlib devices: 2
+  API: OpenGL Message: Unable to show GL data. glxinfo is missing.
+Audio:
+  Device-1: Intel Alder Lake PCH-P High Definition Audio vendor: Samsung Co
+    driver: sof-audio-pci-intel-tgl bus-ID: 00:1f.3
+  API: ALSA v: k6.6.63-1-lts status: kernel-api
+Network:
+  Device-1: Intel Alder Lake-P PCH CNVi WiFi driver: iwlwifi v: kernel
+    bus-ID: 00:14.3
+  IF: wlo1 state: up mac: <filter>
+Bluetooth:
+  Device-1: Intel AX211 Bluetooth driver: btusb v: 0.8 type: USB
+    bus-ID: 3-10:5
+  Report: rfkill ID: hci0 rfk-id: 0 state: down bt-service: not found
+    rfk-block: hardware: no software: no address: see --recommends
+Drives:
+  Local Storage: total: 953.87 GiB used: 0 KiB (0.0%)
+  ID-1: /dev/nvme0n1 vendor: Samsung model: MZVLQ1T0HBLB-00B
+    size: 953.87 GiB temp: 25.9 C
+Partition:
+  ID-1: / size: 3.81 GiB used: 1.17 GiB (30.8%) fs: overlay source: ERR-102
+Swap:
+  Alert: No swap data was found.
+Sensors:
+  Src: /sys System Temperatures: cpu: 55.0 C mobo: N/A
+  Fan Speeds (rpm): N/A
+  Power: 12v: N/A 5v: 5 3.3v: N/A vbat: N/A
+Info:
+  Memory: total: 16 GiB note: est. available: 15.26 GiB used: 8.69 GiB (56.9%)
+    igpu: 64 MiB
+  Processes: 330 Uptime: 4h 44m Init: systemd
+  Packages: 833 Compilers: N/A Shell: Bash v: 5.2.37 inxi: 3.3.36
+[root@sysrescue ~]# 
+
+
+
+
+
 on firefox, from all those options on the config - i mean the deep ones, there are actually only 5 or 6 (perhaps) that are the most important ones - am i correct or not - please ALWAYS feel free to disagree, im 50 years old, only focused on results
 
 
