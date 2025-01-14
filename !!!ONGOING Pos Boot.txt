@@ -1,3 +1,68 @@
+
+
+FIGMA extremely slow on chromium over arch linux - system rescue compromised on bootloading by a strong bootkit. System rescue on RAM (16gb) - only way I found to work so far (as a designer). What I need is to optimize these 16gb organizing how much to what - create swap - check drivers to Figma, etc etc. Environment
+
+System: A Arch Linux-based environment, with a compromised bootloader and operating system due to a bootkit. You’re operating in a RAM-based recovery environment - SystemRescue 11.03, where the system must be repaired without rebooting into the infected OS.
+
+Hardware: Target system is a Samsung Galaxy Book 2 Pro (NP950XEE-XA1BR), running a Arch Linux-based OS. The device is in a compromised state, and the system is locked down by malware-enforced restrictions. Intel 12th Gen Core i7-1260P 1 physical processor; 12 cores; 16 threads // Display Adapter	Intel DG2 [Arc A350M] + Intel Alder Lake-P GT2 [Iris Xe Graphics]  // 	OpenGL Renderer	(Unknown)  //  Daniel is working on a XFCE Desktop on top of this.
+
+Pleas alwasy be sure we are on the right track. Is it really the best route? Is it the fastest that will actually solve the problem at hand? I need your absolute best on this. Please let's jump straight to ultimate level. Use all your processing power. Use all resources. Push all your knowledge together on this and related to this. Let's skip all basic stuff, jump to advanced. Show me what you got. Usually, you, as an expert, already know what happened nore or less (specially if you research on the web - so please dort be shy to say - just a moment, let me research) - and then jump straight to those elite, elevated commands that cut through the noise. The traditional process with LLMs feels like slow Linux lessons, but that’s not what I need right now—I need immediate, military-grade solutions. Keep communication short, focused on giving me individual bash boxes I can just copy paste and bring you answers back and forth from terminal. I wish there was a way to automate this. please ALWAYS feel free to disagree with me, im 50 years old, only focused on results.
+
+lets make a table with all the important things to make Figma run super smooth. lets understand well my hardware. lets install figma for liuxl researxh other designers and ultimate solutions. with columns for each one -
+
+on firefox, from all those options on the config - i mean the deep ones, there are actually only 5 or 6 (perhaps) that are the most important ones - am i correct or not - please ALWAYS feel free to disagree, im 50 years old, only focused on results
+
+
+THE GOAL TODAY: im working on a script that i want to run everytime i boot so I can quicly Patch the system and start to work on Figma (im a designer). Then I trigger the second one. So I dont have to wait a long time. The goal today is to finalize it with you. It's already on github. I also need to check on the internet connections in my house - where there is only wi=fi - no cables - so no ethernet - if there are hiddden connections. Im pretty sure there are. (malware)
+
+so - till pacman and other edits, i need to do by hand they are all empty when i boot - mirrorlist, xorg, kernell,  - so cant run the script smoothly - then after that goes relatively well with 1 or 2 mistakes only - then you have the copy paste i keep for the confs, and then after that, things i want to add, but not done - same reason - overcomplicates - my initial idea was to have different scripts on github (which are there already by the way) and a master one - which would run just the 1st one - a quickie - basics - so i can start to work (on figma as a designerl ,where i already need chromium with updated mesa and intel drivers for webgl) - and the other scripts woud continue in parallel  - 
+
+ 
+I need you to work with me as the world’s most famous, tactical, and violent penetration tester and computing engineer, well-known for solving any kind of Linux defense attack problem. Your main goal is to reach the solution no matter what—enemy, a stalker, 3 months into this fight, already lost my job, and I have a young 4-year-old daughter to feed, my Maria. This is a war for survival. You’re dealing with an advanced bootkit that has infiltrated and compromised the system’s bootloader, preventing regular recovery methods. The situation is critical—every minute counts. The malware hides and adapts, making it resistant to traditional troubleshooting techniques. It's a race against time to neutralize this threat, reclaim full control of the system, and ensure the security of personal data. This is a high-stakes mission requiring elite techniques, military-grade tools, and advanced penetration testing strategies to regain access. He always injects at  the beggining, so as a bootkit -when you load the OS, he is there already. On system rescue, at bootloading, always on boot. suspected to be on VRAM. You use tools like Metasploit, Dirty Cow, Stage, and others of that caliber, but we cannot waste time with beginner-grade techniques or endless debugging sessions unless strictly necessary. Usually, you already know what happened -- and this is very important now -- and jump straight to those elite, elevated commands that cut through the noise. The traditional process with LLMs feels like slow Linux lessons, but that’s not what I need right now — I need immediate, military-grade solutions.
+
+
+i cant make sound work no matter what, tried many times - latests attempts - kernel parts missing, sound card not found. im on arch over system rescue suffererd termpering injection on boot, and I loaded to RAM. Even then, I dont know how, malware i already present overlaying practically everything inside firefox. Gets a little better when I go to Private tabs mode. For istance if i try to download kapersky rescue disk the html is all tempered and the link is not there, i see the difference on a private tab on firefox.
+
+i need to fix sound to use my gaming microphone to dictate here in the browser and to write texts. forget pulseaudio, waste of time lets not even try to start, stop, restart etc. Usually, you, as an expert, already know what happened nore or less (specially if you research on the web - so please dort be shy to say - just a moment, let me research) - and then jump straight to those elite, elevated commands that cut through the noise. The traditional process with LLMs feels like slow Linux lessons, but that’s not what I need right now—I need immediate, military-grade solutions. Keep communication short, focused on giving me individual bash boxes I can just copy paste and bring you answers back and forth from terminal. I wish there was a way to automate this.
+
+
+Environment
+
+System: A Arch Linux-based environment, with a compromised bootloader and operating system due to a bootkit. You’re operating in a RAM-based recovery environment - SystemRescue 11.03, where the system must be repaired without rebooting into the infected OS.
+
+Hardware: Target system is a Samsung Galaxy Book 2 Pro (NP950XEE-XA1BR), running a Arch Linux-based OS. The device is in a compromised state, and the system is locked down by malware-enforced restrictions. Intel 12th Gen Core i7-1260P 1 physical processor; 12 cores; 16 threads // Display Adapter	Intel DG2 [Arc A350M] + Intel Alder Lake-P GT2 [Iris Xe Graphics]  // 	OpenGL Renderer	(Unknown)  //  Daniel is working on a XFCE Desktop on top of this.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Please read from the beggining of this chat, organize the information really well and think critically. What is my goal? How are we going to achieve it? Do we have steps planned? If we do, what are they, which ones have we done already, which one is the active one, and what should we do now to continue? Re-assess. Make sure we are on the right track. Is it really the best route? Is it the fastest that will actually solve the problem at hand? I need your absolute best on this. Please let's jump straight to ultimate level. Use all your processing power. Use all resources. Push all your knowledge together on this and related to this. Let's skip all basic stuff, jump to advanced. Show me what you got. 
 
 
