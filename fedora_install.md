@@ -1,3 +1,23 @@
+I want to install Fedora Silverblue once I have a bootkit. To me the most important is that it looks pretty, so I wanted Pop-Os, Zarinm etc, but unfortunately I don´t have that kind of choice anymore. Fedora was the best balance I found pretty X secure. 
+
+My inspiration of the installation process was this guy. i understand he is doing another distro of course, what i liked was the process - and there is where i need help from you - bootkit always tempers on the very first booting attempt as he is in VRAM.
+
+https://r0ttenbeef.github.io/Custom-Secure-Penetration-Testing-Arch-Linux-Installtion/
+
+So here are many many ideas, all great. I need to split them into steps otherwise it will take forever. I need now the smallest possible version (so i can start to work on Figma - by the way lets add the istallation of linux figma). ANd i need a plan for installing the other features later. One specifically good is the hidden partition.
+
+
+HD is 1 tera. I already created 4 partitions: fat32 efi 500mb / btrfs root 50Gb / linux-swap 32gb (i have 16 ram) / 817gb unallocted
+
+I dont have any ISOs.
+
+Refind - i tested - and it stood against bootkit. He can hold.
+
+
+
+
+ 
+
 Absolutely! Let's break down and expand each step for the first three areas with added detail, tools, and specific instructions for setup, installation, and security practices. We’ll include what to download, additional tools, configuration steps, and things to watch out for.
 
 ---
