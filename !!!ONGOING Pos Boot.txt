@@ -186,6 +186,128 @@ Hardware: Target system is a Samsung Galaxy Book 2 Pro (NP950XEE-XA1BR), running
 
 
 
+INVESTIGATE BOOTKITS
+
+
+
+To dig deeper into potential malware activity on your system, you can run the following commands to gather information and analyze system behavior:
+
+### 1. **Check System Logs for Suspicious Activity**
+   - Review system logs for any unusual activity.
+     ```bash
+     cat /var/log/syslog | grep -i 'error\|warn\|fail'
+     cat /var/log/auth.log | grep -i 'sshd\|login\|failed'
+     journalctl -xe
+     ```
+
+### 2. **List All Processes Running on the System**
+   - Check for any processes that seem unusual or unfamiliar.
+     ```bash
+     ps aux --sort=-%cpu | head -n 20
+     ps aux --sort=-%mem | head -n 20
+     ```
+
+### 3. **Search for Suspicious Network Connections**
+   - Look for unexpected or unknown network connections.
+     ```bash
+     netstat -tuln
+     ss -tuln
+     lsof -i -n -P
+     ```
+
+### 4. **Check for Suspicious Scheduled Tasks**
+   - Look for unexpected cron jobs or at jobs running.
+     ```bash
+     crontab -l
+     ls -l /etc/cron.d /etc/cron.daily /etc/cron.hourly /etc/cron.weekly /etc/cron.monthly
+     atq
+     ```
+
+### 5. **Look for Unusual Kernel Modules or System Modifications**
+   - Check loaded kernel modules and look for anything unfamiliar.
+     ```bash
+     lsmod
+     ```
+
+   - Check the boot parameters and kernel configuration.
+     ```bash
+     cat /proc/cmdline
+     cat /etc/default/grub
+     ```
+
+### 6. **Look for Rootkits**
+   - Use rootkit detection tools like `Chkrootkit` or `RKHunter`.
+     ```bash
+     sudo chkrootkit
+     sudo rkhunter --check
+     ```
+
+### 7. **Verify Disk Activity and Monitor I/O**
+   - Monitor disk activity to spot unexpected disk operations.
+     ```bash
+     iotop -o
+     blktrace -d /dev/sda
+     ```
+
+### 8. **Check for Hidden Files or Directories**
+   - Look for hidden files or directories that could be part of the malware.
+     ```bash
+     ls -la / | grep '^\.'   # List hidden files at the root
+     find / -name '.*'       # Find all hidden files on the system
+     ```
+
+### 9. **Check for Modified System Binaries**
+   - Verify the integrity of system binaries.
+     ```bash
+     debsums -s        # For Debian-based systems
+     rpm -Va           # For RedHat-based systems
+     ```
+
+### 10. **Check for Unusual Virtual Devices (e.g., virtual eSIM)**
+   - Inspect your network interfaces and devices.
+     ```bash
+     ip link show
+     ls /dev
+     ```
+
+### 11. **Check for Unusual Disk Partitions**
+   - Verify the partition table and look for unexpected partitions.
+     ```bash
+     sudo fdisk -l
+     lsblk
+     ```
+
+### 12. **Scan for Suspicious Network Activity**
+   - Use `tcpdump` to monitor network packets for strange activity.
+     ```bash
+     sudo tcpdump -i eth0
+     ```
+
+### 13. **Check for Bootkit Activity**
+   - Investigate bootloader files and make sure they haven't been tampered with.
+     ```bash
+     ls /boot
+     sudo sha256sum /boot/*
+     ```
+
+### 14. **Investigate USB Devices**
+   - If malware could be running from external devices, inspect attached USB devices.
+     ```bash
+     lsusb
+     ```
+
+### 15. **Check for Suspicious Services or Ports**
+   - Use `systemctl` to list and inspect all running services.
+     ```bash
+     systemctl list-units --type=service
+     ```
+
+These commands will help you identify unusual activity or configurations that might be part of a malware infection or a system compromise. Run them and look for anything out of the ordinary in the outputs. Let me know if you need further guidance on interpreting the results.
+
+
+
+
+
 
 
 
