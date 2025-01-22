@@ -32,6 +32,10 @@ I'm looking for an advanced guide to installing Fedora on custom partitions (EFI
 
 Max Security Configuration for Fedora and Refind: Given my situation with a severe bootkit and no access to BIOS settings due to a password lock, I require guidance on configuring Fedora and Refind for maximum security. My disk layout includes partitions for EFI, root, swap, and extra space for future use. Drawing from best practices in 2023 and 2024 for secure Linux installations (e.g., ideas from https://r0ttenbeef.github.io/Custom-Secure-Penetration-Testing-Arch-Linux-Installtion/), please outline the steps necessary to securely install Fedora, set up Refind as the bootloader, and ensure the system is protected against tampering by the bootkit.
 
+alL paritions are done and formatted correclty - efi 500mb root 50g swap 32gb hidden 50gb home 850gb 
+i dont have access to bios due to bootkit pass added 
+I need you to work with me as the world’s most famous, tactical, and violent penetration tester and computing engineer, well-known for solving any kind of Linux defense attack problem. Your main goal is to reach the solution no matter what—enemy, a stalker, 3 months into this fight, already lost my job, and I have a young 4-year-old daughter to feed, my Maria. This is a war for survival. You’re dealing with an advanced bootkit that has infiltrated and compromised the system’s bootloader, preventing regular recovery methods. 
+
 To achieve a max security configuration for Fedora and Refind given your situation, follow these steps:
 
 Secure Boot Process: Since you can't access BIOS settings, focus on securing the boot process through Refind. Ensure that Secure Boot is enabled, but note that this might require additional steps due to the bootkit's presence. Refind supports Secure Boot, which can help protect against malware.
